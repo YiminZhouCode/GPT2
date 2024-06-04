@@ -20,6 +20,7 @@ RUN conda create -n myenv python=3.8 -y && \
     echo "conda activate myenv" >> ~/.bashrc
 
 RUN /opt/conda/envs/myenv/bin/pip install --upgrade pip && \
-    /opt/conda/envs/myenv/bin/pip install -r requirements.txt
+    /opt/conda/envs/myenv/bin/pip install -r requirements.txt && \
+    /opt/conda/envs/myenv/bin/pip install jupyter
 
 CMD ["bash"]
